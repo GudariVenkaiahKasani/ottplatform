@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Body0 from "./components/Body0";
+import Footer from "./components/footer";
+import SignUp from "./components/SignUp";
+import { createBrowserRouter } from "react-router-dom";
+import Subscriptionplans from "./components/subscriptionplans";
+import MovieComponet from "./components/MoviesComponet";
+import Hollywoodmovies from "./components/Hollywoodmovies";
+
+export const approuter = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/signin",
+    element: <SignUp />,
+  },
+  {
+    path: "/movies",
+    element: <MovieComponet />,
+  },
+  {
+    path: "/hollywoodmovies",
+    element: <Hollywoodmovies />,
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Body0 />
+      <Subscriptionplans />
+      <Footer />
     </div>
   );
 }
