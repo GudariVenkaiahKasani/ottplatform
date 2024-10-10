@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import mockData from "../utilities/data/data1";
 import MoviePageCard from "./MoviePageCard";
+//import Hollywoodmovies from "./Hollywoodmovies";
 import MovieImageRender from "./MovieImageRender";
 import { useNavigate } from "react-router-dom";
 
@@ -13,6 +14,18 @@ const MoviePageBody = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [movie, setMovie] = useState(null);
   const navigate = useNavigate();
+  const [pagenumber, setPageNumber] = useState(1);
+  const [pageDispaly] = useState(10);
+  const handlePreviousButton = () => {
+    setPageNumber(pagenumber - 1);
+  };
+  const handleNextButton = () => {
+    setPageNumber(pagenumber + 1);
+  };
+  let lastIndexNumber = pagenumber * pageDispaly;
+  let firstIndexNumber = lastIndexNumber - pageDispaly;
+  let finalmovies = filteredMovies.slice(firstIndexNumber, lastIndexNumber);
+  let lastpage = Math.ceil(filteredMovies.length / pageDispaly);
 
   const hollywoodMovieHandler = () => {
     navigate("/hollywoodmovies");
@@ -57,7 +70,7 @@ const MoviePageBody = () => {
   }, [language, genre, rating, moviename]);
 
   return (
-    <div className="bg-black pt-4 min-h-screen">
+    <div className="bg-black pt-4 min-h-screen pl-20">
       {isOpen ? (
         <MovieImageRender movie={movie} closeImage={closeImage} />
       ) : (
@@ -126,21 +139,43 @@ const MoviePageBody = () => {
           </div>
 
           <div className="flex flex-wrap justify-center bg-black min-h-screen">
-            {filteredMovies.length > 0 ? (
-              filteredMovies.map((result) => (
-                <div key={result.title} onClick={() => handleCard(result)}>
-                  <MoviePageCard
-                    key={result.title}
-                    image={result.imageUrl}
-                    title={result.title}
-                  />
-                </div>
-              ))
-            ) : (
-              <div className="flex justify-center items-center h-screen">
-                <p className="text-white text-4xl">No movies found</p>
+            <div className="bg-black h-screen flex flex-col  items-center">
+              <div className="flex flex-wrap gap-10">
+                {finalmovies.map((movie) => (
+                  <div key={movie.title} onClick={() => handleCard(movie)}>
+                    <MoviePageCard
+                      key={movie.title}
+                      image={movie.imageUrl}
+                      title={movie.title}
+                    />
+                  </div>
+                ))}
               </div>
-            )}
+              <div>
+                <div className="flex flex-row gap-80 m-6">
+                  {pagenumber > 1 && (
+                    <button
+                      className="text-white bg-red-700 p-2"
+                      onClick={handlePreviousButton}
+                      disabled={pagenumber === 1}
+                    >
+                      Previous
+                    </button>
+                  )}
+                  {pagenumber < lastpage && (
+                    <button
+                      className="text-white bg-red-700 px-5"
+                      onClick={handleNextButton}
+                      disabled={
+                        pagenumber === Math.ceil(filteredMovies / pageDispaly)
+                      }
+                    >
+                      Next
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
