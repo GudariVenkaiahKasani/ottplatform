@@ -6,6 +6,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Subscriptionplans from "./components/subscriptionplans";
 import MovieComponet from "./components/MoviesComponet";
 import Hollywoodmovies from "./components/Hollywoodmovies";
+import { useEffect } from "react";
 
 export const approuter = createBrowserRouter([
   {
@@ -27,6 +28,9 @@ export const approuter = createBrowserRouter([
 ]);
 
 function App() {
+  useEffect(() => {
+    document.title = "Movieflix";
+  }, []);
   return (
     <div>
       <Header />

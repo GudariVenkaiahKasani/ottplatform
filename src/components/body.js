@@ -39,7 +39,7 @@ const Body = () => {
             id="email"
             name="email"
             required
-            placeholder="Enter your email address"
+            placeholder="Enter (gudari183@gmail.com)"
             className="w-80 rounded-xl opacity-80 bg-black p-3 border-0 text-white outline-none"
             onChange={(e) => setEmail(e.target.value)}
           ></input>
