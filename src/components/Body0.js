@@ -10,10 +10,7 @@ const Body0 = () => {
       <div className="pl-20 text-exrabold text-white text-2xl pt-4">
         Trending Movies
       </div>
-      <Body1 />
-      <div className="pl-20 text-white mt-5 text-extrabold text-2xl">
-        More reasons to join
-      </div>
+    
       <div className="flex flex-row px-20 py-8">
         <Cards />
       </div>
