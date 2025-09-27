@@ -6,6 +6,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Subscriptionplans from "./components/subscriptionplans";
 import MovieComponet from "./components/MoviesComponet";
 import Hollywoodmovies from "./components/Hollywoodmovies";
+import Hollywoodmovies from "./components/Hollywoodmovies";
+import Hollywoodmovies from "./components/Hollywoodmovies";]
 import { useEffect } from "react";
 
 export const approuter = createBrowserRouter([
