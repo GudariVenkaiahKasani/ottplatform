@@ -17,6 +17,24 @@ const Body0 = () => {
       <div className="flex flex-row px-20 py-8">
         <Cards />
       </div>
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+    
+    
+    
       <div className="sm:px-8 md:px-10 lg:px-20">
         <Accordion data={mockData.questions} openMultiple={true} />
       </div>
