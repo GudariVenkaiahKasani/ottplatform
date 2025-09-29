@@ -3,8 +3,7 @@ import React from "react";
 const AccordionPane = ({
   title,
   content,
-  isOpen,
-  setSelectedItemIndexHandle,
+
 }) => {
   return (
     <>
