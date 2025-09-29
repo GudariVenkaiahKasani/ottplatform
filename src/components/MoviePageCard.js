@@ -5,6 +5,19 @@ const MoviePageCard = ({ image, title }) => {
         <img src={image} alt={title + " image"} className="w-[100%] h-[100%]" />
       </div>
       <h3 className="text-white text-lg font-semibold mt-2">{title}</h3>
+  useEffect(() => {
+    document.title = "Movieflix";
+  }, []);
+  return (
+    <div>
+      <Header />
+      <Body0 />
+      <Subscriptionplans />
+      <Footer />
+    </div>
+  );
+
+
     </div>
   );
 };
