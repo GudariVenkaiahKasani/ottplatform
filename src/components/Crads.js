@@ -1,7 +1,7 @@
 import mockData from "../utilities/data/data1";
 
 const Cards = () => {
-  return mockData.moreReasonsToJoin.map((card) => (
+  return mockData.moreReasonsToJoin.map(() => (
     <div className=" bg-gradient-to-br from-green-200 via-black to-purple-400 h-64 mr-6 w-1/4 rounded-2xl">
       <div className="text-white text-extrabold text-2zxl py-6 pl-2 h-[40%]">
         {card.title}
