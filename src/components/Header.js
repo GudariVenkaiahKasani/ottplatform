@@ -7,7 +7,7 @@ const Header = () => {
       <div className="justify-between flex ">
         <div className="font-black text-red-700  text-5xl p-7">MOVIEFLIX</div>
         <div className="pr-40 py-7">
-          <button className="bg-yellow-800 px-2 py-1 rounded-lg text-white">
+          <button className="bg-black px-2 py-1 rounded-lg text-white">
             <Link to="signin">SignIn</Link>
           </button>
         </div>
