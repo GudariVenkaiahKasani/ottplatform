@@ -46,7 +46,7 @@ resource "aws_s3_object" "frontend_files" {
   key    = each.value
   source = "${path.module}/build/${each.value}"
 
-  etag = filemd5("${path.module}/build/${each.value}")
+  etag = filemd5("${path.module}../build/${each.value}")
 
   content_type = lookup({
     html = "text/html"
