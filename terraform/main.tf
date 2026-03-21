@@ -44,7 +44,7 @@ resource "aws_s3_object" "frontend_files" {
 
   bucket = aws_s3_bucket.frontend.id
   key    = each.value
-  source = "${path.module}/build/${each.value}"
+  source = "${path.module}/../build/${each.value}"
 
   etag = filemd5("${path.module}/../build/${each.value}")
 
