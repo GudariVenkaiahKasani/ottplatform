@@ -40,13 +40,13 @@ resource "aws_s3_bucket_policy" "frontend" {
 }
 
 resource "aws_s3_object" "frontend_files" {
-  for_each = fileset("${path.module}/build", "**")
+  for_each = fileset("${path.module}/../build", "**")
 
   bucket = aws_s3_bucket.frontend.id
   key    = each.value
   source = "${path.module}/build/${each.value}"
 
-  etag = filemd5("${path.module}../build/${each.value}")
+  etag = filemd5("${path.module}/../build/${each.value}")
 
   content_type = lookup({
     html = "text/html"
