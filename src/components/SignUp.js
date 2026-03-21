@@ -52,7 +52,7 @@ function SignUp() {
 
               <button
                 type="submit"
-                className="w-full px-4 py-2 bg-black text-white font-bold rounded hover:bg-blue-700 focus:outline-none"
+                className="w-full px-4 py-2 bg-yellow-300 text-white font-bold rounded hover:bg-blue-700 focus:outline-none"
               >
                 SignIn
               </button>
