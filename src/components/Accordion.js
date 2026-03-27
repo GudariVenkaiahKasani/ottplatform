@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AccordionPane from "./AccordionPane";
+
 
 const Accordion = ({ data, openMultiple = false }) => {
   const [selecctedItemIndex, setSelectedItemIndex] = useState(-1);
@@ -7,13 +7,7 @@ const Accordion = ({ data, openMultiple = false }) => {
     Array(data.length).fill(false)
   );
 
-  const setSelectedItemIndexHandle = (index) => {
-    if (selecctedItemIndex === index) {
-      setSelectedItemIndex(-1);
-      return;
-    }
-    setSelectedItemIndex(index);
-  };
+  
 
   const setSelectedIndexesHandle = (index) => {
     setSelectedIndexes((prev) => {
