@@ -4,14 +4,12 @@ import MoviePageCard from "./MoviePageCard";
 const Hollywoodmovies = () => {
   const [pagenumber, setPageNumber] = useState(1);
   const [pageDispaly] = useState(5);
-  const handlePreviousButton = () => {
-    setPageNumber(pagenumber - 1);
-  };
+  
   const handleNextButton = () => {
     setPageNumber(pagenumber + 1);
   };
   let lastIndexNumber = pagenumber * pageDispaly;
-  let firstIndexNumber = lastIndexNumber - pageDispaly;
+
   let Hollymovies = mockData.movies.slice(firstIndexNumber, lastIndexNumber);
   let lastpage = Math.ceil(mockData.movies.length / pageDispaly);
 
