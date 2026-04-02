@@ -14,6 +14,42 @@ const Header = () => {
       </div>
       <div className="py-60">
         <Body />
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+      <Body1 />
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+      <Body1 />
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+      <Body1 />
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+      <Body1 />
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+      <Body1 />
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+      <Body1 />
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+      <Body1 />
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+      <Body1 />
+    <div className="pl-20 text-exrabold text-white text-2xl pt-4">
+        Trending Movies
+      </div>
+      <Body1 />
       </div>
     </div>
   );
